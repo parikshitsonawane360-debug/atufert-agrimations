@@ -56,6 +56,7 @@ function Index() {
   const [openFaq, setOpenFaq] = useState(0);
   const [cartCount, setCartCount] = useState(0);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   useCartSync();
 
   useEffect(() => {
@@ -74,14 +75,19 @@ function Index() {
         <a className="transition-colors hover:text-olive" href="#faq">FAQ</a>
       </nav>
       <div className="flex items-center gap-3">
-        <Button variant="ghost" className="size-10 px-0 md:w-auto md:px-4" aria-label="Open menu"><Menu size={16} /><span className="hidden md:inline">Menu</span></Button>
+        <Button variant="ghost" className="size-10 px-0 md:w-auto md:px-4" aria-label="Open menu" aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}><Menu size={16} /><span className="hidden md:inline">Menu</span></Button>
         <CartDrawer />
       </div>
     </header>
+    {menuOpen && <nav className="mx-5 mb-4 grid gap-1 rounded-xl border border-line bg-card p-2 text-sm font-semibold shadow-sm md:hidden" aria-label="Mobile navigation">
+      <button className="rounded-lg px-4 py-3 text-left hover:bg-paper-deep" onClick={() => { setMenuOpen(false); setAboutOpen(true); }}>About Us</button>
+      <Link className="rounded-lg px-4 py-3 hover:bg-paper-deep" to="/products" onClick={() => setMenuOpen(false)}>Products</Link>
+      <a className="rounded-lg px-4 py-3 hover:bg-paper-deep" href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
+    </nav>}
 
     <section id="top" className="relative mx-auto min-h-[760px] max-w-[1440px] px-5 pb-12 pt-6 md:px-10 md:pt-14">
       <div className="relative z-10 max-w-[660px]">
-        <h1 className="text-balance text-[clamp(4.3rem,9.5vw,9.3rem)] font-medium leading-[0.78] tracking-normal">ATUFERT<br/>AGRIMATIONS</h1>
+        <h1 className="text-balance text-[clamp(2.7rem,14vw,9.3rem)] font-medium leading-[0.86] tracking-tight md:leading-[0.78] md:tracking-normal">ATUFERT<br/>AGRIMATIONS</h1>
         <p className="mt-8 max-w-[420px] text-sm leading-6 text-muted-foreground">Turning food waste into clean energy and organic fertilizer, we create a sustainable future while reducing landfill pollution and carbon emissions.</p>
         <div className="mt-7 flex items-center gap-2"><Button asChild><Link to="/products">View Products</Link></Button><Button variant="sun" className="size-10 px-0" aria-label="View products" asChild><Link to="/products"><span aria-hidden>→</span></Link></Button></div>
       </div>
