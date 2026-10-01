@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BadgeCheck, Globe, Headset, Leaf, Menu, Minus, Plus, Sprout, Tractor, Waves, X } from "lucide-react";
+import { BadgeCheck, Globe, Headset, Leaf, Menu, Minus, Phone, Plus, Sprout, Tractor, Waves, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import seedlingHero from "@/assets/seedling-hero.png";
@@ -76,6 +76,7 @@ function Index() {
         <a className="transition-colors hover:text-olive" href="#faq">FAQ</a>
       </nav>
       <div className="flex items-center gap-3">
+        <Button variant="outline" size="sm" className="inline-flex size-10 px-0 sm:hidden" aria-label="Contact us" asChild><Link to="/contact"><Phone size={16} /></Link></Button>
         <Button variant="outline" size="sm" className="hidden sm:inline-flex" asChild><Link to="/contact">Contact</Link></Button>
         <Button variant="ghost" className="size-10 px-0 md:w-auto md:px-4" aria-label="Open menu" aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}><Menu size={16} /><span className="hidden md:inline">Menu</span></Button>
         <CartDrawer />
