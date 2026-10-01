@@ -303,7 +303,7 @@ function ProductsPage() {
       <footer className="bg-ink px-5 py-12 text-paper md:px-10">
         <div className="mx-auto flex max-w-[1320px] flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <div><Link to="/" className="inline-block rounded bg-paper p-2"><img src={logoUrl} alt="ATUFERT Agrimations Equipments" className="h-11 w-auto object-contain" /></Link><p className="mt-5 max-w-sm text-xs leading-5 opacity-60">Supporting agriculture with carefully selected solutions for farms, livestock, pets, and crops.</p></div>
-          <div className="flex gap-6 text-xs"><Link to="/">Home</Link><Link to="/products">Products</Link><a href="tel:+919096955533">Contact</a><a href="https://wa.me/919096955533?text=Hello%20ATUFERT%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noreferrer">WhatsApp</a></div>
+          <div className="flex flex-wrap gap-6 text-xs"><Link to="/">Home</Link><Link to="/products">Products</Link><Link to="/contact">Contact</Link><a href="https://wa.me/919096955533?text=Hello%20ATUFERT%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noreferrer">WhatsApp</a></div>
         </div>
         <div className="mx-auto mt-10 flex max-w-[1320px] flex-col gap-3 border-t border-paper/20 pt-6 text-[10px] opacity-50 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 ATUFERT Agrimations Equipments. All rights reserved.</span><div className="flex gap-5"><Link to="/privacy-policy" className="underline underline-offset-4">Privacy Policy</Link><Link to="/terms-of-service" className="underline underline-offset-4">Terms of Service</Link></div></div>
       </footer>
