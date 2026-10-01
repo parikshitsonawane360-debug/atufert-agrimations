@@ -72,9 +72,11 @@ function Index() {
       <nav className="hidden items-center gap-10 text-xs font-semibold md:flex">
         <a className="cursor-pointer transition-colors hover:text-olive" onClick={(e) => { e.preventDefault(); setAboutOpen(true); }}>About us</a>
         <Link className="transition-colors hover:text-olive" to="/products">Products</Link>
+        <Link className="transition-colors hover:text-olive" to="/contact">Contact</Link>
         <a className="transition-colors hover:text-olive" href="#faq">FAQ</a>
       </nav>
       <div className="flex items-center gap-3">
+        <Button variant="outline" size="sm" className="hidden sm:inline-flex" asChild><Link to="/contact">Contact</Link></Button>
         <Button variant="ghost" className="size-10 px-0 md:w-auto md:px-4" aria-label="Open menu" aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}><Menu size={16} /><span className="hidden md:inline">Menu</span></Button>
         <CartDrawer />
       </div>
