@@ -226,7 +226,7 @@ function Index() {
       <div className="relative z-10 mx-auto grid max-w-[1320px] gap-12 text-xs md:grid-cols-4">
         <div><Link to="/" aria-label="ATUFERT home" className="inline-block"><img src={logoUrl} alt="ATUFERT Agrimations Equipments" className="h-16 w-auto object-contain md:h-18" /></Link><div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 opacity-70"><a href="#about" className="cursor-pointer" onClick={(e) => { e.preventDefault(); setAboutOpen(true); }}>About Us</a><Link to="/products">Products</Link><Link to="/contact">Contact</Link><a href="#faq">FAQ</a></div></div>
         <div><p className="opacity-40">Social Media</p><div className="mt-5 grid gap-3"><a href="https://wa.me/919096955533?text=Hello%20ATUFERT%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noreferrer">WhatsApp</a></div></div>
-        <div><p className="opacity-40">Contact Info</p><div className="mt-5 grid gap-3"><a href="tel:+919096955533">+91 9096955533</a><a href="mailto:atufertagrimations@gmail.com">atufertagrimations@gmail.com</a></div></div>
+        <div><p className="opacity-40">Contact Info</p><div className="mt-5 grid gap-3"><a href="tel:+919096955533">+91 9096955533</a><a href="mailto:atufertagrimations@gmail.com">atufertagrimations@gmail.com</a><Button variant="sun" size="sm" className="mt-3 w-fit" asChild><Link to="/contact">Open Contact Page</Link></Button></div></div>
         <div><p className="opacity-40">Address</p><p className="mt-5 leading-5">Nashik,<br/>Maharashtra, India</p></div>
       </div>
       <p className="mt-12 whitespace-nowrap text-[clamp(3.3rem,9vw,8.5rem)] font-medium leading-none text-primary-foreground/10">ATUFERT AGRIMATIONS</p>
